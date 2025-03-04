@@ -24,7 +24,7 @@ body {
   color: #333; /* Dark text for readability */
   line-height: 1.6; /* Good spacing between lines */
 
-  @apply  bg-gradient-to-br from-indigo-900 via-purple-900;
+  @apply  bg-gradient-to-br from-violet-500 via-purple-950;
 }
 
 /* Container */

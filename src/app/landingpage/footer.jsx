@@ -22,7 +22,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-700 bg-clip-text text-transparent font-bold">
-                EngAweis
+                @EngAweis
               </span>
             </a>
           </div>
