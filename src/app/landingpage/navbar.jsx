@@ -66,7 +66,7 @@ const Navbar = () => {
             
           </div>
 
-          <Link href="/login" className="hidden md:flex">
+          <Link href="https://app-sheekochat.netlify.app/login" className="hidden md:flex">
               <button className="bg-white text-gray-900 py-2 px-4 rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300">
               🚀 Get Started
               <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -113,7 +113,7 @@ const Navbar = () => {
               >
                 Contact
               </Link>
-              <Link href="/login" onClick={() => setIsOpen(false)}>
+              <Link href="https://app-sheekochat.netlify.app/login" onClick={() => setIsOpen(false)}>
                 <button className="bg-white text-gray-900 py-2 px-6 rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300">
                 🚀 Get Started
                 <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>

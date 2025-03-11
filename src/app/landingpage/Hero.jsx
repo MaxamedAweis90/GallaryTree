@@ -10,7 +10,7 @@ const Hero = () => {
       <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-gray-300 mb-9 max-w-2xl">
         Connect, chat, and share stories with ease! 💬✨
       </p>
-      <Link href="/">
+      <Link href="https://app-sheekochat.netlify.app/">
         <button className="bg-yellow-500 hover:bg-yellow-200 hover:scale-105 text-black font-semibold px-8 py-3 rounded-full shadow-xl transition-all duration-300 flex items-center gap-2">
           Launch App
         </button>
