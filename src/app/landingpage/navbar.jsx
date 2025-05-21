@@ -1,8 +1,8 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,53 +29,48 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between p-4 backdrop-blur-md">
           {/* Logo / App Name */}
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-yellow-100 bg-clip-text text-transparent">
-              SheekoChat
+            <span className="text-2xl font-bold bg-gradient-to-r from-slate-100 to-blue-100 bg-clip-text text-transparent">
+              GalleryTree
             </span>
           </Link>
 
           {/* Hamburger Icon (mobile) */}
           <button
             onClick={() => setIsOpen(true)}
-            className="text-white text-10 focus:outline-none md:hidden"
+            className="text-white text-2xl focus:outline-none md:hidden"
           >
             ☰
           </button>
 
-          {/* Desktop Navigation (optional) */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-6">
             <Link
-              href="/"
+              href="#features"
               className="text-white hover:text-gray-300 transition duration-300"
             >
-              Home
+              Features
             </Link>
             <Link
-              href="/about"
-              className="text-white hover:text-gray-300 transition duration-300"
-            >
-              About
-            </Link>
-            <Link
-              href="/contact"
+              href="#contact"
               className="text-white hover:text-gray-300 transition duration-300"
             >
               Contact
             </Link>
-            
-            
           </div>
 
-          <Link href="https://app-sheekochat.netlify.app/login" className="hidden md:flex">
-              <button className="bg-white text-gray-900 py-2 px-4 rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300">
-              🚀 Get Started
-              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
-              </button>
-            </Link>
+          {/* Launch App Button */}
+          <Link href="https://app-gallerytree.vercel.app" className="hidden md:flex">
+            <button className="bg-white text-gray-900 py-2 px-4 rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300">
+              🚀 Launch App
+              <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
+                →
+              </span>
+            </button>
+          </Link>
         </div>
       </nav>
 
-      {/* Sidebar for Mobile Navigation */}
+      {/* Mobile Sidebar Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -87,36 +82,34 @@ const Navbar = () => {
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute top-5 right-5 text-white text-10 focus:outline-none"
+              className="absolute top-5 right-5 text-white text-2xl focus:outline-none"
             >
               ✕
             </button>
             <div className="flex flex-col items-center space-y-6">
               <Link
-                href="/"
+                href="#features"
                 onClick={() => setIsOpen(false)}
                 className="text-white text-2xl hover:text-gray-300 transition duration-300"
               >
-                Home
+                Features
               </Link>
               <Link
-                href="/about"
-                onClick={() => setIsOpen(false)}
-                className="text-white text-2xl hover:text-gray-300 transition duration-300"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
+                href="#contact"
                 onClick={() => setIsOpen(false)}
                 className="text-white text-2xl hover:text-gray-300 transition duration-300"
               >
                 Contact
               </Link>
-              <Link href="https://app-sheekochat.netlify.app/login" onClick={() => setIsOpen(false)}>
+              <Link
+                href="https://app-gallerytree.vercel.app"
+                onClick={() => setIsOpen(false)}
+              >
                 <button className="bg-white text-gray-900 py-2 px-6 rounded-full hover:bg-gray-200 hover:scale-105 transition duration-300">
-                🚀 Get Started
-                <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  🚀 Launch App
+                  <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">
+                    →
+                  </span>
                 </button>
               </Link>
             </div>

@@ -1,14 +1,11 @@
-/* app/globals.css */
-/* @import "tailwindcss"; */
-
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
-/* 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-} */
+@tailwind utilities;
+
+/* Import Poppins from Google */
+:root {
+  --font-primary: 'Poppins', sans-serif;
+}
 
 /* Global Reset */
 * {
@@ -19,92 +16,32 @@
 
 /* Body Styling */
 body {
-  font-family: "Inter", sans-serif; /* Use a modern font */
-  background-color: #0d061f; /* Light background */
-  color: #333; /* Dark text for readability */
-  line-height: 1.6; /* Good spacing between lines */
-
-  @apply  bg-gradient-to-br from-violet-500 via-purple-950;
+  font-family: var(--font-primary);
+  background: linear-gradient(135deg, #0d061f 0%, #2e1052 100%);
+  color: #f3f4f6;
+  line-height: 1.6;
 }
 
-/* Container */
+/* Utility overrides */
+a {
+  text-decoration: none;
+}
+
+/* Container max width */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
-  width: 100%;
+  padding: 0 1rem;
 }
 
-
-
-.test {
-  padding: 20px;
-  margin: 20px;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding: 0 32px;
-  }
-}
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* Links */
-a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #0056b3;
+h1, h2, h3 {
+  font-family: var(--font-primary);
+  font-weight: 800;
 }
 
 /* Buttons */
-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #007bff;
-  color: #fff;
-  border-radius: 5px;
-  text-align: center;
-  transition: background 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-/* Responsive Images */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-
-
-
-
-.ahmed {
-  width: 100%;
-  background: #000;
-  height: 100vh;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+.btn {
+  @apply inline-block px-6 py-3 rounded-full font-semibold transition-all duration-300;
 }
